@@ -13,7 +13,6 @@ function processSubmit (e) {
   state.newCaption = caption.value
 
   renderCartoon()
-  submitCaption.reset()
 }
 
 function getCartoon () {
@@ -44,16 +43,26 @@ function renderCartoon () {
   cartoonContainer.innerHTML = state.imageSource
     ? `
     <img src="${state.imageSource}" alt="cartoon">
-    <div class="new-caption italic">${captionText}</div>
+    <div class="new-caption italic margin-top-medium">${captionText}</div>
     `
     : 'nothing here'
 }
 
 function reset () {
   submitCaption.reset()
+}
 
+function createSourceLink () {
+  const sourceUrl = document.getElementById('source-url')
+  const isDat = window.DatArchive && window.location.origin.startsWith('dat:')
+  const url = isDat
+    ? `beaker://library/${window.location}`
+    : 'https://github.com/achou11/ye-olde-yorker'
+
+  sourceUrl.href = url
 }
 
 document.addEventListener('DOMContentLoaded', getCartoon)
+document.addEventListener('DOMContentLoaded', createSourceLink)
 getCartoonButton.addEventListener('click', getCartoon)
 submitCaption.addEventListener('submit', processSubmit)
