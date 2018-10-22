@@ -1,0 +1,32 @@
+<html lang="en-US" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ye Olde Yorker</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h1>Ye Olde Yorker</h1>
+        <caption>Add a custom caption to a New Yorker cartoon.</caption>
+        <button class="get-cartoon">Get new cartoon</button>
+        <form class="submit-caption">
+            <label for="add-caption">Add your caption</label>
+            <input id="add-caption" type="text" name="caption-input"
+                autocomplete="off" />
+            <input type="submit" value="Submit" />
+        </form>
+        <div class="cartoon-container"></div>
+        <footer>
+            <span class="attribution">All images come from the The New Yorker
+                random cartoon API
+            </span>
+            <span class="inspiration">
+                Inspired by <a href="https://www.newyorker.com/cartoons/random/">this</a>
+            </span>
+        </footer>
+        <script type="module" src="index.js"></script>
+    </body>
+
+</html>
