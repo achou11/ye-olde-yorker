@@ -8,7 +8,6 @@
     </head>
 
     <body>
-
         <div class="content">
             <header>
                 <h1>Ye Olde Yorker</h1>
@@ -16,17 +15,19 @@
             </header>
 
             <main>
-                <div class="interactions-container margin-top-small">
+                <div class="interactions-container margin-top-medium">
                     <form class="submit-caption">
-                        <input id="add-caption" class="border-custom font-small"
+                        <input id="add-caption" class="input-border-custom font-small"
                             type="text" name="caption-input"
                             autocomplete="off" placeholder="Insert caption here"
                             />
-                        <input class="border-custom font-small" type="submit"
-                            value="Submit" />
+                        <input class="button-border-custom font-small margin-top-small" type="submit"
+                        value="Submit" />
                     </form>
-                    <button type="submit" class="get-cartoon border-custom
+                    <div class="button-container">
+                        <button class="get-cartoon button-border-custom
                         font-small">Get new cartoon</button>
+                    </div>
                 </div>
                 <div class="cartoon-container margin-top-small"></div>
             </main>

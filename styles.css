@@ -24,11 +24,18 @@ main {
 
 form {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-input[type="text"] {
-    flex: 1;
+input[type="submit"] {
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center
 }
 
 .cartoon-container {
@@ -38,12 +45,9 @@ input[type="text"] {
     align-items: center;
     height: inherit;
     padding: 1rem 0 1rem 0;
-    border: 1px solid #323232;
 }
 
 img {
-    /* max-width: 100%;
-    max-height: 100%; */
     display: block;
     width: 100%;
     height: auto;
@@ -60,20 +64,28 @@ footer {
 }
 
 .margin-top-small {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .margin-top-medium {
+    margin-top: 1rem;
+}
+
+.margin-top-large {
     margin-top: 2rem;
 }
 
-.border-custom {
+.button-border-custom {
     background-color: inherit;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
-.border-custom:hover {
-    border-style: dotted;
+.button-border-custom:hover {
+    border-style: double;
+}
+
+.input-border-custom {
+    border: 1px solid black;
 }
 
 .font-small {
