@@ -77,11 +77,11 @@ footer {
 
 .button-border-custom {
     background-color: inherit;
-    border: 3px solid black;
+    border: 3px double black;
 }
 
 .button-border-custom:hover {
-    border-style: double;
+    border-style: solid;
 }
 
 .input-border-custom {
