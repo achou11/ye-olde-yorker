@@ -48,10 +48,6 @@ function renderCartoon () {
     : 'nothing here'
 }
 
-function reset () {
-  submitCaption.reset()
-}
-
 function createSourceLink () {
   const sourceUrl = document.getElementById('source-url')
   const isDat = window.DatArchive && window.location.origin.startsWith('dat:')
