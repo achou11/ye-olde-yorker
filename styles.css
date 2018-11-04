@@ -53,6 +53,10 @@ img {
     height: auto;
 }
 
+.new-caption {
+    font-family: 'IM Fell Great Primer', serif;
+}
+
 footer {
     display: flex;
     width: 100%;
