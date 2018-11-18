@@ -2,7 +2,7 @@
 
 # Ye Olde Yorker
 
-I stumbled upon the The New Yorker's random cartoon API and decided to build somethingwith it. This is that something.
+I stumbled upon the The New Yorker's random cartoon API and decided to build something with it. This is that something.
 
 Heavily inspired by their [random cartoon generator](https://newyorker.com/cartoons/random/) app.
 
