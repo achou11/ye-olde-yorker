@@ -17,6 +17,18 @@ body {
   flex-direction: column;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  color: silver;
+}
+
+a:visited, a:active {
+  color: grey;
+}
+
 main {
   max-width: 100%;
   flex: 1;
