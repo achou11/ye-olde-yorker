@@ -1,51 +1,28 @@
-// 'use strict;'
-const submitCaption = document.querySelector('.submit-caption')
-const caption = submitCaption.querySelector('[name=caption-input]')
-const getCartoonButton = document.querySelector('.get-cartoon')
-const cartoonContainer = document.querySelector('.cartoon-container')
+'use strict';
+const captionForm = document.querySelector('.caption-form')
+const captionInput = captionForm.querySelector('[name=caption-input]')
+const newCartoonButton = document.querySelector('.get-cartoon')
+const cartoonImage = document.querySelector('img')
+const newCaption = document.querySelector('.new-caption')
 
-const state = {}
-const url = 'https://www.newyorker.com/cartoons/random/randomAPI'
+const ENDPOINT = 'https://www.newyorker.com/cartoons/random/randomAPI'
 
 function processSubmit (e) {
   e.preventDefault()
-
-  state.newCaption = caption.value
-
-  renderCartoon()
+ 
+  newCaption.textContent = captionInput.value.length > 0 ? `"${captionInput.value}"` : ''
 }
 
 function getCartoon () {
-  if (state.newCaption) {
-    state.newCaption = null
-  }
-
-  fetch(url)
+  fetch(ENDPOINT)
     .then(res => res.json())
     .then((data) => {
       const cartoon = data[0]
-
-      // if (!cartoon.caption) { console.log('no caption'); return }
-      state.imageSource = cartoon.src
-      state.originalCaption = cartoon.caption
-      state.date = new Date(cartoon.date).toUTCString()
-
-      renderCartoon()
+      cartoonImage.setAttribute('src', cartoon.src)
     })
     .catch((err) => console.error(err))
 
-  submitCaption.reset()
-}
-
-function renderCartoon () {
-  const captionText = state.newCaption ? `"${state.newCaption}"` : ''
-
-  cartoonContainer.innerHTML = state.imageSource
-    ? `
-    <img src="${state.imageSource}" alt="cartoon">
-    <div class="new-caption italic margin-top-medium">${captionText}</div>
-    `
-    : 'nothing here'
+  captionForm.reset()
 }
 
 function createSourceLink () {
@@ -60,5 +37,5 @@ function createSourceLink () {
 
 document.addEventListener('DOMContentLoaded', getCartoon)
 document.addEventListener('DOMContentLoaded', createSourceLink)
-getCartoonButton.addEventListener('click', getCartoon)
-submitCaption.addEventListener('submit', processSubmit)
+newCartoonButton.addEventListener('click', getCartoon)
+captionForm.addEventListener('submit', processSubmit)
