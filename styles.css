@@ -1,97 +1,97 @@
 * {
-    font-family: serif;
+  font-family: serif;
 }
 
 html {
-    max-width: 100vw;
-    max-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    max-width: 100%;
-    flex: 1;
+  max-width: 100%;
+  flex: 1;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 input[type="submit"] {
-    align-self: center;
-    margin-top: 0.5rem;
+  align-self: center;
+  margin-top: 0.5rem;
 }
 
 .button-container {
-    display: flex;
-    justify-content: center
+  display: flex;
+  justify-content: center
 }
 
 .cartoon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: inherit;
-    padding: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+  padding: 1rem 0 1rem 0;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .new-caption {
-    font-family: 'IM Fell Great Primer', serif;
+  font-family: 'IM Fell Great Primer', serif;
 }
 
 footer {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .margin-top-small {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .margin-top-medium {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .margin-top-large {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .button-border-custom {
-    background-color: inherit;
-    border: 3px double black;
+  background-color: inherit;
+  border: 3px double black;
 }
 
 .button-border-custom:hover {
-    border-style: solid;
+  border-style: solid;
 }
 
 .input-border-custom {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .font-small {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }

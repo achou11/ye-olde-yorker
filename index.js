@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const captionForm = document.querySelector('.caption-form')
 const captionInput = captionForm.querySelector('[name=caption-input]')
 const newCartoonButton = document.querySelector('.get-cartoon')
@@ -9,7 +9,7 @@ const ENDPOINT = 'https://www.newyorker.com/cartoons/random/randomAPI'
 
 function processSubmit (e) {
   e.preventDefault()
- 
+
   newCaption.textContent = captionInput.value.length > 0 ? `"${captionInput.value}"` : ''
 }
 
