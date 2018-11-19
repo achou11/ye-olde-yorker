@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const captionForm = document.querySelector('.caption-form')
 const captionInput = captionForm.querySelector('[name=caption-input]')
 const newCartoonButton = document.querySelector('.get-cartoon')
