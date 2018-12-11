@@ -34,7 +34,7 @@ function getCartoon () {
 function processSubmit (e) {
   e.preventDefault()
 
-  newCaption.textContent = captionInput.value.length > 0 && `"${captionInput.value}"`
+  newCaption.textContent = captionInput.value.length > 0 ? `"${captionInput.value}"` : ''
 }
 
 function reset () {  
