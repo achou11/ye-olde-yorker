@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ye Olde Yorker</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ye Olde Yorker</title>
-  <link href="styles.css" rel="stylesheet" />
-</head>
+  <body>
+    <div class="content">
+      <header>
+        <h1>Ye Olde Yorker</h1>
+        <caption>
+          Add a custom caption to a cartoon from
+          <a
+            class="italic"
+            href="https://www.newyorker.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >The New Yorker</a
+          >:
+        </caption>
+      </header>
 
-<body>
-  <div class="content">
-    <header>
-      <h1>Ye Olde Yorker</h1>
-      <caption>Add a custom caption to a cartoon from 
-        <a class="italic" href="https://www.newyorker.com" target="_blank" rel="noopener noreferrer">The New Yorker</a>:
-      </caption>
-    </header>
-
-    <main>
-      <div class="interactions-container margin-top-medium">
-        <form class="caption-form">
-          <input 
-          id="add-caption" 
-          class="input-border-custom font-small" 
-          type="text" name="caption-input" 
-          autocomplete="off" 
-          placeholder="Insert caption here" 
-          />
-          <input 
-          class="button-border-custom font-small margin-top-small" 
-          type="submit" 
-          value="Submit" 
-          />
-        </form>
-        <div class="button-container margin-top-small">
-          <button class="get-cartoon button-border-custom font-small">Get new cartoon</button>
+      <main>
+        <div class="interactions-container margin-top-medium">
+          <form class="caption-form">
+            <input
+              id="add-caption"
+              class="input-border-custom font-small"
+              type="text"
+              name="caption-input"
+              autocomplete="off"
+              placeholder="Insert caption here"
+            />
+            <input
+              class="button-border-custom font-small margin-top-small"
+              type="submit"
+              value="Submit"
+            />
+          </form>
+          <div class="button-container margin-top-small">
+            <button class="get-cartoon button-border-custom font-small">
+              Get new cartoon
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="cartoon-container margin-top-small">
-        <img alt="cartoon" />
-        <div class="new-caption italic margin-top-medium"></div>
-      </div>
-    </main>
+        <div class="cartoon-container margin-top-small">
+          <img alt="cartoon" crossorigin="anonymous" src="./cartoon.jpeg" />
+          <div class="new-caption italic margin-top-medium"></div>
+        </div>
+      </main>
 
-    <footer class="margin-top-small">
-      <a id="source-url" target="_blank" rel="noopener noreferrer">View Source</a>
-    </footer>
-  </div>
+      <button id="saveNewImage">
+        Save as image
+      </button>
+      <footer class="margin-top-small">
+        <a id="source-url" target="_blank" rel="noopener noreferrer"
+          >View Source</a
+        >
+      </footer>
+    </div>
 
-  <script type="module" src="index.js"></script>
-</body>
-
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
